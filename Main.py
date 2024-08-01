@@ -38,7 +38,7 @@ def getOperator(prompt="enter your operator (+, -, *, /) \n"):
         if user_input in operators:
             return user_input
         else:
-            print("this is an inv`alid operator. please enter one of the following: \n (+, -, *, /)")
+            print("this is an invalid operator. please enter one of the following: \n (+, -, *, /)")
 
 
 def calculation(num1,num2, operation):
@@ -72,9 +72,11 @@ if __name__ == "__main__":
 
         calculation(num1,num2, op)
 
-        contin = input("continue Y/N \n")
-        if ((contin == "Y") or (contin== "y")):
+        continue_calc = input("continue Y/N \n")
+        if ((continue_calc == "Y") or (continue_calc == "y")):
             continue
-        elif ((contin == "N") or (contin=="n")):
+        elif ((continue_calc == "N") or (continue_calc =="n")):
             calculate = False
+            print("goodbye!")
+            SystemExit
         
